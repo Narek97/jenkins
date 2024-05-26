@@ -3,6 +3,14 @@ pipeline {
     agent any
 
     stages {
+        stage("Yarn"){
+            steps{
+                echo "yarn start"
+                nodejs("nodejs-22.1.0"){
+                    sh 'yarn install'
+                }
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Start Building..'
