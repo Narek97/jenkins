@@ -7,7 +7,7 @@ pipeline {
             steps{
                 echo "yarn start"
                 nodejs("nodejs-22.1.0"){
-                    sh 'yarn install'
+                    sh 'yarn'
                 }
             }
         }
